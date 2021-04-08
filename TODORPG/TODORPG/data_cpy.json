@@ -1,0 +1,25 @@
+[
+	{
+		"username": "bob",
+		"password": "1234",
+		"experience" : 1,
+		"tasks": [
+			{
+				"id": 0,
+				"title": "zrobic pranie",
+				"description": "jak najszybciej",
+				"difficulty": "easy",
+				"created_at": 1615813912,
+				"expiration_time": 1715813912
+			},
+			{
+				"id": 1,
+				"title": "zrobić projekt",
+				"description": "todorpg",
+				"difficulty": "hard",
+				"created_at": 1614813912,
+				"expiration_time": 1624813912
+			}
+		]
+	}
+]
