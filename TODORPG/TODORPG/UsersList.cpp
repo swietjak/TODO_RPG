@@ -1,5 +1,8 @@
 #include "UsersList.h"
 #include <tchar.h>
+#include <iomanip>
+#include <iostream>
+#include <map>
 #include <Windows.h>
 #include <debugapi.h>
 
@@ -18,6 +21,7 @@ UsersList::UsersList(const char* filename)
 
 UsersList::UsersList()
 {
+	std::multimap<std::string, int, int> chuj;
 }
 
 UsersList::~UsersList()
@@ -91,7 +95,17 @@ void UsersList::UpdateJson()
 	j.clear();
 	for (auto user : this->List)
 		j.push_back(user->ReturnUserJson());
-	f << j;
+	f << std::setw(4) << j;
+}
+
+std::multimap<std::string, std::pair<int, int>> UsersList::GetUsersStats()
+{
+	std::multimap<std::string, std::pair<int, int>> mp;
+	for (auto u : this->List)
+	{
+		mp.insert(std::make_pair(u->username, std::pair<int, int>(u->GetLevel(), u->GetExperience())));
+	}
+	return mp;
 }
 
 TaskDifficulty UsersList::ReturnEnumFromJson(std::string difficulty)

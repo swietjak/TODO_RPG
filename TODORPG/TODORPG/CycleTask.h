@@ -1,3 +1,4 @@
+/*@file*/
 #pragma once
 #include "Task.h"
 class CycleTask :

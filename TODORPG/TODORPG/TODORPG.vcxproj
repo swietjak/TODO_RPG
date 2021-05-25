@@ -22,6 +22,7 @@
     <ClInclude Include="cApp.h" />
     <ClInclude Include="cMain.h" />
     <ClInclude Include="CycleTask.h" />
+    <ClInclude Include="CycleTaskDialog.h" />
     <ClInclude Include="LoginDialog.h" />
     <ClInclude Include="MessageDialog.h" />
     <ClInclude Include="RegisterDialog.h" />
@@ -35,6 +36,7 @@
     <ClCompile Include="cApp.cpp" />
     <ClCompile Include="cMain.cpp" />
     <ClCompile Include="CycleTask.cpp" />
+    <ClCompile Include="CycleTaskDialog.cpp" />
     <ClCompile Include="LoginDialog.cpp" />
     <ClCompile Include="json.hpp" />
     <ClCompile Include="MessageDialog.cpp" />
@@ -115,6 +117,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>D:\wxWidgets-3.1.4\include; D:\wxWidgets-3.1.4\include\msvc</AdditionalIncludeDirectories>
+      <LanguageStandard>Default</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -131,6 +134,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>D:\wxWidgets-3.1.4\include; D:\wxWidgets-3.1.4\include\msvc</AdditionalIncludeDirectories>
+      <LanguageStandard>Default</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

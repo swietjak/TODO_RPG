@@ -51,7 +51,7 @@ void User::AddTask(Task* t, time_t timeToSet)
 {
 	t->SetCreatedAt(timeToSet);
 	t->SetExpirationDate(timeToSet + DAY);
-	this->AddTask(t);
+	this->userTasks.push_back(t);
 }
 
 void User::AddCycleTask(CycleTask* t)
@@ -80,6 +80,8 @@ void User::RemoveTask(int _id)
 		if ((*it)->GetId() == _id)
 		{
 			this->UpdateExperience((*it)->GetTaskDifficulty(), (*it)->GetExpirationDate());
+			delete *it;
+			*it = nullptr;
 			this->userTasks.erase(it);
 			break;
 		}
@@ -92,6 +94,8 @@ void User::RemoveCycleTask(int _id)
 	{
 		if ((*it)->GetId() == _id)
 		{
+			delete* it;
+			*it = nullptr;
 			this->userCycleTasks.erase(it);
 			break;
 		}
